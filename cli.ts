@@ -30,7 +30,6 @@ const d = temporaryDirectory();
 process.chdir(d);
 $.cwd = d;
 
-process.env.GH_TOKEN = core.getInput("token");
 process.env.GH_HOST = new URL(core.getInput("github_server_url")).host;
 await $`gh auth setup-git`;
 
